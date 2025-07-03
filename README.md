@@ -5,4 +5,4 @@ The official website for Epic Verification. Click the link below to get to our w
 |
 [Invite our bot!](https://discord.com/oauth2/authorize?client_id=1343739275405164584&permissions=268503040&integration_type=0&scope=bot+applications.commands)
 |
-[Support Server](/Link_Unavailable.md)
+Support: [Server](/Link_Unavailable.md), [Phone or Email](/Link_Unavailable.md)
