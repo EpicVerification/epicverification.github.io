@@ -6,6 +6,7 @@
     <title>The #1 Best Verification Bot on Discord | Epic Verification</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/default.css" />
     <style>
         /* Custom styles to ensure Inter font and Discord-like theme */
         body {
@@ -49,7 +50,7 @@
         <div class="container mx-auto flex justify-between items-center">
             <!-- Main Logo -->
             <div class="flex items-center space-x-2">
-                <img src="https://placehold.co/40x40/7289da/ffffff?text=BOT" alt="Bot Logo" class="rounded-full">
+                <img src="/assets/favicons/v1/logo.png" height="40" width="40" alt="Bot Logo" class="rounded-full">
                 <span class="text-2xl font-bold text-white">Epic Verification</span>
             </div>
 
@@ -57,20 +58,24 @@
             <nav class="hidden md:flex space-x-6">
                 <a href="#" class="text-gray-300 hover:text-white transition duration-300">Home</a>
                 <a href="#" class="text-gray-300 hover:text-white transition duration-300">Docs</a>
-                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Cint</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Contact</a>
                 <a href="#" class="text-gray-300 hover:text-white transition duration-300">Support</a>
             </nav>
 
             <!-- Login with Discord Button (Header) -->
+            <a href="#login">
             <button class="discord-login-button discord-blurple discord-blurple-hover text-white px-6 py-2 rounded-lg font-semibold flex items-center space-x-2 transition duration-300">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.236 3.061A18.57 18.57 0 0 0 12 0C5.385 0 0 5.385 0 12a18.57 18.57 0 0 0 3.061 7.236L0 24l4.764-3.061A18.57 18.57 0 0 0 12 24c6.615 0 12-5.385 12-12a18.57 18.57 0 0 0-3.061-7.236L24 0zM12 21.5c-5.244 0-9.5-4.256-9.5-9.5S6.756 2.5 12 2.5s9.5 4.256 9.5 9.5-4.256 9.5-9.5 9.5zM12 6c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8.5c-1.93 0-3.5-1.57-3.5-3.5S10.07 7 12 7s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
                 <span>Login</span>
             </button>
+            </a>
 
             <!-- Mobile menu button (hidden on desktop) -->
+            <a class="">
             <button class="md:hidden text-gray-300 hover:text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
+            </a>
         </div>
     </header>
     <!-- Hero/Main Content Area -->
@@ -78,29 +83,31 @@
         <!-- Text Content (Left) -->
         <div class="md:w-1/2 text-center md:text-left">
             <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-4">
-                Elevate Your Discord Server with <span class="text-discord-blurple">YourBotName</span>
+                Elevate Your Discord Server with <span class="text-discord-blurple">Epic Verification</span>
             </h2>
             <p class="text-lg text-gray-300 mb-6">
-                Automate moderation, enhance community engagement, and streamline management with our powerful and easy-to-use Discord bot.
+                A really simple, easy-to-use dashboard that can help you with your server.
             </p>
             <!-- Login with Discord Button (Hero) -->
+            <a href="#invite" target="_blank">
             <button class="discord-login-button discord-blurple discord-blurple-hover text-white px-8 py-3 rounded-lg font-semibold text-xl flex items-center justify-center md:justify-start space-x-2 mx-auto md:mx-0 transition duration-300">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.236 3.061A18.57 18.57 0 0 0 12 0C5.385 0 0 5.385 0 12a18.57 18.57 0 0 0 3.061 7.236L0 24l4.764-3.061A18.57 18.57 0 0 0 12 24c6.615 0 12-5.385 12-12a18.57 18.57 0 0 0-3.061-7.236L24 0zM12 21.5c-5.244 0-9.5-4.256-9.5-9.5S6.756 2.5 12 2.5s9.5 4.256 9.5 9.5-4.256 9.5-9.5 9.5zM12 6c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8.5c-1.93 0-3.5-1.57-3.5-3.5S10.07 7 12 7s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
                 <span>Add to Discord</span>
             </button>
+            </a>
         </div>
         <!-- Image (Right) -->
         <div class="md:w-1/2 flex justify-center">
-            <img src="https://placehold.co/400x300/36393f/7289da?text=Bot+Showcase" alt="Bot Showcase Image" class="max-w-full h-auto rounded-lg shadow-lg">
+            <img src="https://placehold.co" alt="Bot Showcase Image" class="max-w-full h-auto rounded-lg shadow-lg">
         </div>
     </main>
     <!-- About the Bot Area -->
     <section class="container mx-auto my-12 p-8 discord-gray-dark shadow-xl">
-        <h2 class="text-3xl font-bold text-center text-discord-blurple mb-8">About YourBotName</h2>
+        <h2 class="text-3xl font-bold text-center text-discord-blurple mb-8">About Epic Verification/h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             <div class="p-6 bg-gray-700 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold text-white mb-3">Moderation</h3>
-                <p class="text-gray-300">Keep your server clean and safe with automated moderation tools and customizable rules.</p>
+                <h3 class="text-xl font-semibold text-white mb-3">Simply amazing</h3>
+                <p class="text-gray-300">It is the best bot, and the best Verification bot that you can use for your server! It has lots of amazing options!</p>
             </div>
             <div class="p-6 bg-gray-700 rounded-lg shadow-md">
                 <h3 class="text-xl font-semibold text-white mb-3">Engagement</h3>
@@ -116,19 +123,21 @@
     <section class="container mx-auto my-12 p-8 discord-blurple shadow-xl text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">What Are You Waiting For?</h2>
         <p class="text-lg text-white mb-8">
-            Join thousands of happy server owners who are already using YourBotName to make their communities thrive!
+            Join thousands of happy server owners who are already using Epic Verification to make their communities the best secure experience!
         </p>
+        <a href="#signup">
         <button class="discord-green discord-green-hover text-white px-8 py-4 rounded-lg font-bold text-xl transition duration-300 shadow-lg">
             Get Started Today!
         </button>
+        </a>
     </section>
     <!-- Footer -->
     <footer class="bg-gray-800 p-8 mt-12">
         <div class="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left space-y-8 md:space-y-0">
             <!-- Left Section: Logo, Text, DMCA -->
             <div class="flex flex-col items-center md:items-start space-y-2">
-                <img src="https://placehold.co/50x50/7289da/ffffff?text=BOT" alt="Bot Logo" class="rounded-full mb-2">
-                <span class="text-xl font-bold text-white">YourBotName</span>
+                <img src="/assets/favicons/v1/logo.png" width="50" height="50" alt="Bot Logo" class="rounded-full mb-2">
+                <span class="text-xl font-bold text-white">Epic Verification</span>
                 <p class="text-sm text-gray-400">Your Bot's Slogan Here</p>
                 <div class="mt-4">
                     <a href="#" class="text-gray-400 hover:text-white text-sm">DMCA Badge Area (Placeholder)</a>
@@ -137,7 +146,7 @@
 
             <!-- Center Section: Copyright Text and Links -->
             <div class="flex flex-col items-center md:items-start space-y-2">
-                <p class="text-sm text-gray-400">&copy; 2025 YourBotName. All rights reserved.</p>
+                <p class="text-sm text-gray-400">Copyright &copy; 2025 Epic Verification. All rights reserved.</p>
                 <div class="flex flex-col space-y-1">
                     <a href="#" class="discord-link text-sm">Privacy Policy</a>
                     <a href="#" class="discord-link text-sm">Terms of Service</a>
@@ -149,8 +158,8 @@
             <div class="flex flex-col items-center md:items-start space-y-2">
                 <p class="text-sm text-gray-400">Quick Links:</p>
                 <div class="flex flex-col space-y-1">
-                    <a href="#" class="discord-link text-sm">Documentation</a>
-                    <a href="#" class="discord-link text-sm">Discord Server</a>
+                    <a href="#" class="discord-link text-sm">Docs</a>
+                    <a href="https://discord.gg/7KQTvJcmwu" class="discord-link text-sm">Support Server</a>
                     <a href="#" class="discord-link text-sm">GitHub</a>
                 </div>
             </div>
