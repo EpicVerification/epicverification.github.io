@@ -1,0 +1,31 @@
+{
+
+  "name": "nothingbuttyler-verification-bot",
+
+  "version": "1.0.0",
+
+  "description": "A simple Discord verification bot.",
+
+  "main": "index.js",
+
+  "scripts": {
+
+    "start": "node index.js"
+
+  },
+
+  "keywords": [],
+
+  "author": "",
+
+  "license": "ISC",
+
+  "dependencies": {
+
+    "discord.js": "^14.4.5", 
+
+    "dotenv": "^16.4.5"
+
+  }
+
+}
