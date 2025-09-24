@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Bot Dashboard</title>
+    <style>
+        /* Basic CSS for a Discord-like theme */
+        body {
+            font-family: 'Inter', sans-serif; /* A common font for modern UIs */
+            background-color: #2c2f33; /* Dark background, similar to Discord */
+            color: #dcddde; /* Light gray text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top */
+            min-height: 100vh;
+            padding-top: 50px; /* Space from top */
+        }
+        .dashboard-container {
+            background-color: #36393f; /* Slightly lighter dark for content area */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #7289da; /* Discord blurple */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+        }
+        .section-title {
+            color: #99aab5; /* Discord light grey */
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #4f545c;
+            padding-bottom: 5px;
+        }
+        .login-area {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .discord-login-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #7289da; /* Discord blurple */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .discord-login-button:hover {
+            background-color: #677bc4;
+        }
+        .discord-login-button img {
+            margin-right: 10px;
+            height: 24px; /* Size for Discord logo */
+            width: 24px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group select {
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #4f545c;
+            background-color: #2f3136; /* Dark input background */
+            color: #dcddde;
+            font-size: 1em;
+        }
+        .form-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .save-button {
+            background-color: #43b581; /* Discord green */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block; /* Make it full width */
+            width: 100%;
+            margin-top: 30px;
+        }
+        .save-button:hover {
+            background-color: #36a56e;
+        }
+        /* Hidden elements that will be shown by JavaScript later */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Your Bot Dashboard</h1>
+
+        <!-- Login Section (can be removed if user is always redirected here after login) -->
+        <div id="login-section" class="login-area hidden">
+            <p>Please log in with Discord to manage your bot.</p>
+            <button class="discord-login-button" id="discord-login-btn">
+                <img src="https://discord.com/assets/f83849de7e738a74e0d7c71e9e244dcd.svg" alt="Discord Logo">
+                Login with Discord
+            </button>
+        </div>
+
+        <!-- Dashboard Content (initially hidden, will be shown by JS or if user is logged in) -->
+        <div id="dashboard-content">
+            <!-- Server Selection Section -->
+            <div class="section-title">Select Server</div>
+            <div class="form-group">
+                <label for="server-select">Choose a server:</label>
+                <select id="server-select">
+                    <option value="">-- Select a Server --</option>
+                    <!-- Options will be populated by JavaScript later -->
+                    <option value="server-id-1">My Awesome Discord Server</option>
+                    <option value="server-id-2">Another Server Managed by You</option>
+                </select>
+            </div>
+
+            <!-- Verification Settings Section -->
+            <div class="section-title">Verification Settings</div>
+            <div class="form-group">
+                <label for="verified-role-id">Verified Role ID:</label>
+                <input type="text" id="verified-role-id" placeholder="Enter the ID of the verified role">
+            </div>
+            <div class="form-group">
+                <label for="verification-channel-id">Verification Channel ID:</label>
+                <input type="text" id="verification-channel-id" placeholder="Enter the ID of the verification channel">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="enable-verification">
+                <label for="enable-verification">Enable Verification System</label>
+            </div>
+
+            <!-- Save Button -->
+            <button class="save-button" id="save-settings-btn">Save Settings</button>
+        </div>
+    </div>
+    <!-- This script will be for future JavaScript interactivity -->
+    <script>
+        // Placeholder for future JavaScript code
+        // For now, the save button will trigger an alert.
+        document.getElementById('save-settings-btn').addEventListener('click', () => {
+            alert('Settings would be saved to a database here!');
+            // In a real setup, this would send data to your backend API.
+        });
+    </script>
+</body>
+</html>

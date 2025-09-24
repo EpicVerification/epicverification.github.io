@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Your Awesome Discord Bot</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to ensure Inter font and Discord-like theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #2c2f33; /* Discord dark background */
+            color: #dcddde; /* Light gray text */
+        }
+        /* Ensure all elements have rounded corners as per instructions */
+        * {
+            border-radius: 0.5rem; /* Tailwind's rounded-lg */
+        }
+        .discord-blurple {
+            background-color: #7289da;
+        }
+        .discord-blurple-hover:hover {
+            background-color: #677bc4;
+        }
+        .discord-green {
+            background-color: #43b581;
+        }
+        .discord-green-hover:hover {
+            background-color: #36a56e;
+        }
+        .discord-gray-dark {
+            background-color: #36393f;
+        }
+        .discord-gray-light {
+            color: #99aab5;
+        }
+        .discord-link {
+            color: #00b0f4; /* Discord link blue */
+        }
+        .discord-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+    <!-- Header Area (reused for consistency) -->
+    <header class="bg-gray-800 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Main Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/40x40/7289da/ffffff?text=BOT" alt="Bot Logo">
+                <span class="text-2xl font-bold text-white">YourBotName</span>
+            </div>
+
+            <!-- Page Links (optional, can be removed if not needed on login) -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Home</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Features</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Pricing</a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Support</a>
+            </nav>
+
+            <!-- Placeholder for potential dashboard link if already logged in -->
+            <div class="hidden md:block text-gray-300"></div> 
+
+            <!-- Mobile menu button (hidden on desktop) -->
+            <button class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+    <!-- Main Content Area for Login -->
+    <main class="flex-grow container mx-auto my-12 p-8 discord-gray-dark shadow-xl flex flex-col items-center justify-center text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-white mb-6">
+            Log In to Your <span class="text-discord-blurple">YourBotName</span> Dashboard
+        </h2>
+        <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+            Access your bot's settings and manage your server with ease.
+            Authenticate securely using your Discord account.
+        </p>
+
+        <!-- Login with Discord Button -->
+        <a href="/auth/discord" class="discord-login-button discord-blurple discord-blurple-hover text-white px-8 py-4 rounded-lg font-semibold text-xl flex items-center justify-center space-x-2 transition duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.236 3.061A18.57 18.57 0 0 0 12 0C5.385 0 0 5.385 0 12a18.57 18.57 0 0 0 3.061 7.236L0 24l4.764-3.061A18.57 18.57 0 0 0 12 24c6.615 0 12-5.385 12-12a18.57 18.57 0 0 0-3.061-7.236L24 0zM12 21.5c-5.244 0-9.5-4.256-9.5-9.5S6.756 2.5 12 2.5s9.5 4.256 9.5 9.5-4.256 9.5-9.5 9.5zM12 6c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8.5c-1.93 0-3.5-1.57-3.5-3.5S10.07 7 12 7s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+            <span>Login with Discord</span>
+        </a>
+
+        <p class="text-sm text-gray-400 mt-6 max-w-xl">
+            By logging in, you agree to our <a href="#" class="discord-link">Terms of Service</a> and <a href="#" class="discord-link">Privacy Policy</a>.
+            Please note: This is a static page. Actual authentication requires a backend server.
+        </p>
+    </main>
+    <!-- Footer (reused for consistency) -->
+    <footer class="bg-gray-800 p-8 mt-12">
+        <div class="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between text-center md:text-left space-y-8 md:space-y-0">
+            <!-- Left Section: Logo, Text, DMCA -->
+            <div class="flex flex-col items-center md:items-start space-y-2">
+                <img src="https://placehold.co/50x50/7289da/ffffff?text=BOT" alt="Bot Logo">
+                <span class="text-xl font-bold text-white">YourBotName</span>
+                <p class="text-sm text-gray-400">Your Bot's Slogan Here</p>
+                <div class="mt-4">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">DMCA Badge Area (Placeholder)</a>
+                </div>
+            </div>
+
+            <!-- Center Section: Copyright Text and Links -->
+            <div class="flex flex-col items-center md:items-start space-y-2">
+                <p class="text-sm text-gray-400">&copy; 2025 YourBotName. All rights reserved.</p>
+                <div class="flex flex-col space-y-1">
+                    <a href="#" class="discord-link text-sm">Privacy Policy</a>
+                    <a href="#" class="discord-link text-sm">Terms of Service</a>
+                    <a href="#" class="discord-link text-sm">Cookie Policy</a>
+                </div>
+            </div>
+
+            <!-- Right Section: More Links -->
+            <div class="flex flex-col items-center md:items-start space-y-2">
+                <p class="text-sm text-gray-400">Quick Links:</p>
+                <div class="flex flex-col space-y-1">
+                    <a href="#" class="discord-link text-sm">Documentation</a>
+                    <a href="#" class="discord-link text-sm">Discord Server</a>
+                    <a href="#" class="discord-link text-sm">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // The JavaScript alerts are removed here as the links now point to the backend route.
+        // This script block is now empty for this page, as the button is an <a> tag.
+    </script>
+</body>
+</html>
